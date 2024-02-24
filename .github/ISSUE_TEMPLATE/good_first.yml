@@ -1,0 +1,46 @@
+name: ➕1️⃣ good first issue Template
+description: Use this template for labeling issues as "Good First Issue" to encourage contributions from newcomers.
+title: "[Good First Issue] <Add a brief title for the issue>"
+labels: [➕1️⃣ good first issue]
+body:
+- type: textarea
+  attributes:
+    label: Issue Description
+    description: Provide a clear description of the issue.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: Describe the expected behavior or outcome.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Steps To Reproduce (if applicable)
+    description: If the issue is a bug, include steps to reproduce it. Otherwise, you can skip this section.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Additional Information (Optional)
+    description: |
+      Provide any additional context, links, or references related to this issue.
+      
+      If you're new to contributing, feel free to ask for guidance or clarification here.
+  validations:
+    required: false
+- type: dropdown
+  attributes:
+    label: Label(s)
+    description: Select one or more labels for this issue.
+    options:
+      - 🪲 bug
+      - ✨ enhancement
+      - 📃 documentation
+      - 🙌🏻 help wanted
+      - 🧩 experiment
+      - ➕1️⃣ good first issue
+  validations:
+    required: false
+    multiple: true

@@ -1,0 +1,55 @@
+{
+	"name": "Blogs Mkdocs Dev Container",
+	
+	// Debug Mode Enabled
+	"trace": "all",
+	"remoteUser": "root",
+  
+	// Start Devcontainer using Dockerfile manifest
+	"dockerFile": "../mkdocs_blogs.Dockerfile",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+	// Start Devcontainer using docker-compose.yml manifest
+	// The order of the files is important since later files override previous ones
+	// "dockerComposeFile": ["../docker-compose.yml"],
+	// "service": "blogs-svc",
+	//"workspaceFolder": "/blogs",
+	
+	// Add the IDs of extensions you want installed when the container is created.
+	"customizations/vscode/extensions": [
+	  "ms-python.python",
+	  "vscodevim.vim",
+	  "ms-azuretools.vscode-docker",
+	  "github.vscode-github-actions",
+	  "eamodio.gitlens",
+	  "mhutchie.git-graph",
+	  "dbaeumer.vscode-eslint",
+	  "johnpapa.vscode-peacock",
+	  "timonwong.shellcheck",
+	  "robertz.code-snapshot"
+	],
+	// "features": {
+	// "ghcr.io/devcontainers/features/github-cli:1": {},
+    // "ghcr.io/mikaello/devcontainer-features/modern-shell-utils:1": {},
+    // "ghcr.io/devcontainers/features/python:1": {
+    //   "version": "3.11"
+    // },
+    // "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
+    // "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	// },
+	"forwardPorts": [8000],
+	
+	"settings": {
+	  // Hide git lens artifacts
+	  "gitlens.showWelcomeOnInstall": false,
+	  // Hide git lens artifacts
+	  "gitlens.showWhatsNewAfterUpgrades": true,
+	  // Hide git lens artifacts
+	  "gitlens.currentLine.enabled": false,
+	  // Hide git lens artifacts
+	  "gitlens.codeLens.enabled": true,
+	  },
+	// This command is created to started the mkdocs server in the devcontainer
+	// Also also set the sh as the entrypoint in the devcontainer and log the details in /var/log inside container
+	"postStartCommand": "mkdocs serve --dev-addr=0.0.0.0:8000 --watch /workspaces/Blogs/TuxTechBlogs/ -f /workspaces/Blogs/TuxTechBlogs/mkdocs.yml --verbose"
+  }

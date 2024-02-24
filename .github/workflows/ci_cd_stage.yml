@@ -1,0 +1,33 @@
+name: ci_cd_stage
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - stage
+permissions:
+  contents: write
+
+jobs:
+  deploy_on_build_stage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: STAGE | Checkout Github Repository
+        uses: actions/checkout@v3  # Use version 3 of the action
+
+      - name: STAGE | Install Python
+        uses: actions/setup-python@v4  # Use version 4 of the action
+        with:
+          python-version: '3.x'
+
+      - name: STAGE | Install Python Dependencies
+        run: |
+          echo "Installing The Python Dependencies"
+          pip install mkdocs mkdocs-material mkdocs-swagger-ui
+          echo "Completed Installing Python Dependencies"
+
+      - name: STAGE | Deploy mkdocs Website
+        run: |
+          cd TuxTechBlogs
+          mkdocs gh-deploy -b stage-pages --clean --force
+          echo "Completed Deploying The Website on stage-pages"

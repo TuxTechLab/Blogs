@@ -1,0 +1,47 @@
+name: 📃 documentation Change Template
+description: Use this template to propose changes or updates to project documentation.
+title: "[Documentation] <Add a brief title for the documentation change>"
+labels: [📃 documentation]
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing issue for this documentation change?
+    description: Please search to see if a similar documentation change request already exists.
+    options:
+    - label: I have searched the existing issues
+      required: true
+- type: textarea
+  attributes:
+    label: Current Documentation
+    description: Please provide details about the current documentation that needs to be changed.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Proposed Documentation Changes
+    description: Describe the proposed changes or updates to the documentation.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional Context (Optional)
+    description: |
+      Provide any additional context, references, or reasons for the documentation change.
+      
+      You can also attach images or files by clicking this area to highlight it and then dragging files in.
+  validations:
+    required: false
+- type: dropdown
+  attributes:
+    label: Label(s)
+    description: Select one or more labels for this issue.
+    options:
+      - 🪲 bug
+      - ✨ enhancement
+      - 📃 documentation
+      - 🙌🏻 help wanted
+      - 🧩 experiment
+      - ➕1️⃣ good first issue
+  validations:
+    required: false
+    multiple: true

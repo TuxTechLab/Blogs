@@ -1,0 +1,33 @@
+name: ci_cd_prod
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+
+jobs:
+  deploy_on_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Github Repository
+        uses: actions/checkout@v3  # Use version 3 of the action
+
+      - name: Install Python
+        uses: actions/setup-python@v4  # Use version 4 of the action
+        with:
+          python-version: '3.x'
+
+      - name: Install Python Dependencies
+        run: |
+          echo "Installing The Python Dependencies"
+          pip install mkdocs mkdocs-material mkdocs-swagger-ui
+          echo "Completed Installing Python Dependencies"
+
+      - name: Deploy mkdocs Website
+        run: |
+          cd TuxTechBlogs
+          mkdocs gh-deploy -b prod-pages --clean --force
+          echo "Completed Deploying The Website"

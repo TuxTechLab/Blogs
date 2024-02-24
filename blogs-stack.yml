@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  blogs-mkdocs-svc:
+    image: "blogs:latest"
+    ports:
+      - "8000:8000"
+
+
+networks:
+  blog_net:

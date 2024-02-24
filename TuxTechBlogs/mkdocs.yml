@@ -1,0 +1,140 @@
+# Project information
+site_name: TuxTechBlogs
+site_description: Computer Science Realted Documents And Interview Tips, Questions, Tech-blogs.
+site_url: https://github.com/TuxTechLab/Blogs
+site_author: Arindam Tanti
+
+# Repository
+repo_name: TuxTechLab/Blogs
+repo_url: https://github.com/TuxTechLab/Blogs
+edit_uri: ''
+
+# Copyright
+copyright: Copyright &copy; <a href="http://github.com/TuxTechLab">TuxTechLabs</a> 2023 - 2024
+
+# Configuration
+theme:
+    name: material
+    highlightjs: true
+    hljs_languages:
+      - yaml
+      - rust
+    shortcuts:
+        help: 191    # ?
+        next: 78     # n
+        previous: 80 # p
+        search: 83   # s
+    logo: img/favicon.ico
+    favicon: img/favicon.ico
+    font:
+      text: Roboto
+      code: Roboto Mono
+    icon:
+      logo: fontawesome/solid/code
+      repo: fontawesome/brands/github
+    features:
+      - navigation.expand
+      - navigation.top
+      - navigation.footer
+      - search.highlight
+      - search.suggest
+      - content.code.copy
+    palette:
+      # Light mode
+      - media: '(prefers-color-scheme: light)'
+        scheme: default
+        primary: yellow
+        accent: light blue
+        toggle:
+          icon: material/weather-night
+          name: Switch to Dark Mode
+      # Dark mode
+      - media: '(prefers-color-scheme: dark)'
+        scheme: slate
+        primary: yellow
+        accent: amber
+        toggle:
+          icon: material/weather-sunny
+          name: Switch To Light Mode
+
+nav:
+  - Start: index.md
+  - Code Of Conduct: CODE_OF_CONDUCT.md
+  - Contribution Guide: Contribution.md
+  - Agile:
+    - Introduction: study/0001. Agile/00.Introduction.md
+    - Understanding the four values of agile: study/0001. Agile/01.Understanding the four values of agile.md
+    - Using agile in everyday work: study/0001. Agile/02.Using agile in everyday work.md
+  - ITSM:
+    - Introduction: study/0009. ITSM/00.Introduction.md
+    - Key Terms: study/0009. ITSM/01.Key Terms.md
+    - ITSM Library and Practices: study/0009. ITSM/02.ITSM Library and Practices.md
+    - Core ITSM Practices: study/0009. ITSM/03.Core ITSM Practices.md
+    - Maturity Matters: study/0009. ITSM/04.Maturity Matters.md
+    - The Atlassian ITSM Solution: study/0009. ITSM/05.The Atlassian ITSM Solution.md
+    - Key Takeaways: study/0009. ITSM/06.Key Takeaways.md
+  - Scrum:
+    - Introduction: study/0019. Scrum/00.Introduction.md
+    - Scrum With Jira: study/0019. Scrum/02.Scrum With Jira.md
+  - Others:
+    - Acronyms: study/acronym.md
+    - Ports: study/ports.md
+    - Status Codes: study/status_codes.md
+
+
+# Customization   
+extra:
+  consent:
+    title: Cookie consent
+    description:
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.sprcom/tuxtechlab
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/arindam_tanti
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/arindam-tanti
+    - icon: material/book-open-page-variant
+      link: https://i-am-ghost.github.io/TuxTechBlogs/
+  analytics:
+    provider: google
+    property: G-BCZ32RGHJ0
+
+# extra_css:
+#   - css/extra.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js
+
+# Extensions
+markdown_extensions:
+  - toc:
+      permalink: false
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx.table
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# Plugins
+plugins:
+  - search:
+      lang:
+        - en
+
+spec:
+  source: 
+    git:
+      ref: TuxTechLab
+      url: https://github.com/TuxTechLab/Blogs

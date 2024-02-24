@@ -1,0 +1,23 @@
+{
+    "extends": "./.markdownlint.json",
+    "no-hard-tabs": true,
+    "rules": {
+      "markdown/allow-inline-html": true
+    },
+        "fenced-code-language": {
+        "allowed_languages": [
+          "bash",
+          "html",
+          "C++",
+          "java",
+          "javascript",
+          "json",
+          "markdown",
+          "python",
+          "text"
+        ],
+        "language_only": true
+    }
+}
+
+

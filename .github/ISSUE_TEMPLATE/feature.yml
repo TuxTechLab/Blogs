@@ -1,0 +1,53 @@
+name: 🚀 Feature Request Template
+description: Use this template to propose a new feature for the project.
+title: "[Feature Request] <Add a brief title for the feature request>"
+labels: [✨ enhancement]
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing feature request for this?
+    description: Please search to see if a similar feature request already exists.
+    options:
+    - label: I have searched the existing feature requests
+      required: true
+- type: textarea
+  attributes:
+    label: Describe the Problem or Need
+    description: A clear and concise description of the problem or need that this feature would address.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Proposed Solution
+    description: A description of the proposed solution or how you envision this feature working.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Alternatives or Workarounds
+    description: Are there any alternatives or workarounds that currently exist?
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Additional Context (Optional)
+    description: |
+      Provide any additional context, use cases, or references that can help us understand the feature request better.
+      
+      You can also attach images or diagrams by clicking this area to highlight it and then dragging files in.
+  validations:
+    required: false
+- type: dropdown
+  attributes:
+    label: Label(s)
+    description: Select one or more labels for this issue.
+    options:
+      - 🪲 bug
+      - ✨ enhancement
+      - 📃 documentation
+      - 🙌🏻 help wanted
+      - 🧩 experiment
+      - ➕1️⃣ good first issue
+  validations:
+    required: false
+    multiple: true
