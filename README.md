@@ -29,8 +29,8 @@
 <img src='TuxTechBlogs/docs/img/site.png' style="height:180px">
 
 ![PRs](https://img.shields.io/badge/PRs-welcome-E87A90.svg?style=flat-square)
-[![Contributors](https://img.shields.io/github/contributors/i-Am-GhOsT/GhostVerse.svg?style=flat-square)](https://github.com/i-Am-GhOsT/GhostVerse/graphs/contributors/)
-[![License](https://img.shields.io/github/license/i-Am-GhOsT/GhostVerse.svg?style=flat-square)](./LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/TuxTechLab/Blogs.svg?style=flat-square)](https://github.com/i-Am-GhOsT/GhostVerse/graphs/contributors/)
+[![License](https://img.shields.io/github/license/TuxTechLab/Blogs.svg?style=flat-square)](./LICENSE)
 ![Github Action Badge](https://github.com/TuxTechLab/Blogs/actions/workflows/pages/pages-build-deployment/badge.svg)
 
 ## 🌐 Connect With Me
