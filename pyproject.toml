@@ -1,20 +1,25 @@
 [tool.poetry]
-name = "gh05tverse"
+name = "blogs"
 version = "0.1.0"
 description = "A one-stop solution for programmers, both experienced and amateurs alike to brush up their programming & Computer Science skills"
 authors = ["Arindam Tanti <arindamtanti123@gmail.com>"]
+license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-mkdocs = "^1.4.3"
-mkdocs-material = "^9.1.18"
-mkdocs-swagger-ui = "^0.1.0"
-jinja2 = "^2.1.3"
-pipdeptree = "^2.13.0"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.12"
+python-dotenv = "^1.0.1"
+pip = "^24.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.7.0"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.12"
+pip = "^24.0"
+black = "^24.2.0"
+flake8 = "^7.0.0"
+nose = "^1.3.7"
 
 [build-system]
 requires = ["poetry-core"]
