@@ -1,16 +1,26 @@
-FROM minidocks/mkdocs:latest
+FROM python:3.11-slim
 
 LABEL maintainer="Arindam Tanti <arindamtanti123@gmail.com>"
 
-USER root
+# Set the working directory in the container
+WORKDIR /app
 
-COPY ./TuxTechBlogs/ /blogs
-WORKDIR /blogs
+# Copy the requirements.txt file into the container
+COPY requirements.txt .
 
-RUN pip install mkdocs && \
-    apk add git --no-cache && \
-    rm -rf /var/cache/apk/*
+# Install Mkdocs and any dependencies specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy the Mkdocs project files into the container
+COPY . .
+
+# Delete cache files and temporary files
+RUN rm -rf __pycache__ \
+    && rm -rf .pytest_cache \
+    && find . -name '*.pyc' -delete
+
+# Expose port 8000 to access the Mkdocs site
 EXPOSE 8000
 
-CMD [ "mkdocs", "serve", "-a", "0.0.0.0:8000", "-w", "/blogs/", "-f", "/blogs/mkdocs.yml", "--verbose"]
+# Command to serve the Mkdocs site
+CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000", "-w", "/app/TuxTechBlogs/", "-f", "/app/TuxTechBlogs/mkdocs.yml", "--verbose"]
