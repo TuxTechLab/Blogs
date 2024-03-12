@@ -62,24 +62,33 @@ nav:
   - Code Of Conduct: CODE_OF_CONDUCT.md
   - Contribution Guide: Contribution.md
   - Agile:
-    - Introduction: study/0001. Agile/00.Introduction.md
-    - Understanding the four values of agile: study/0001. Agile/01.Understanding the four values of agile.md
-    - Using agile in everyday work: study/0001. Agile/02.Using agile in everyday work.md
+    - Introduction: topic/1.0. Agile/00. Introduction.md
+    - Understanding the four values of agile: topic/1.0. Agile/01. Understanding the four values of agile.md
+    - Using agile in everyday work: topic/1.0. Agile/02. Using agile in everyday work.md
   - ITSM:
-    - Introduction: study/0009. ITSM/00.Introduction.md
-    - Key Terms: study/0009. ITSM/01.Key Terms.md
-    - ITSM Library and Practices: study/0009. ITSM/02.ITSM Library and Practices.md
-    - Core ITSM Practices: study/0009. ITSM/03.Core ITSM Practices.md
-    - Maturity Matters: study/0009. ITSM/04.Maturity Matters.md
-    - The Atlassian ITSM Solution: study/0009. ITSM/05.The Atlassian ITSM Solution.md
-    - Key Takeaways: study/0009. ITSM/06.Key Takeaways.md
+    - Introduction: topic/09. ITSM/00. Introduction.md
+    - Key Terms: topic/9.0. ITSM/01. Key Terms.md
+    - ITSM Library and Practices: topic/09. ITSM/02. ITSM Library and Practices.md
+    - Core ITSM Practices: topic/9.0. ITSM/03. Core ITSM Practices.md
+    - Maturity Matters: topic/9.0. ITSM/04. Maturity Matters.md
+    - The Atlassian ITSM Solution: topic/9.0. ITSM/05. The Atlassian ITSM Solution.md
+    - Key Takeaways: topic/9.0. ITSM/06. Key Takeaways.md
   - Scrum:
-    - Introduction: study/0019. Scrum/00.Introduction.md
-    - Scrum With Jira: study/0019. Scrum/02.Scrum With Jira.md
-  - Others:
-    - Acronyms: study/acronym.md
-    - Ports: study/ports.md
-    - Status Codes: study/status_codes.md
+    - Introduction: topic/19.0. Scrum/00. Introduction.md
+    - Scrum With Jira: topic/19.0. Scrum/02. Scrum With Jira.md
+  - Management:
+    - Run Effective Meetings:
+      - Introduction: topic/13.1. Management/00. Run Effective Meetings/01. Introduction.md
+      - Event Determination: topic/13.1. Management/00. Run Effective Meetings/02. Event Determination.md
+      - Running Effective Meeting: topic/13.1. Management/00. Run Effective Meetings/03. Running Effective Meeting.md
+      - Preparation: topic/13.1. Management/00. Run Effective Meetings/04. Preparation.md
+      - Facilitation: topic/13.1. Management/00. Run Effective Meetings/05. Facilitation.md
+      - Participation: topic/13.1. Management/00. Run Effective Meetings/06. Participation.md
+      - Follow-up: topic/13.1. Management/00. Run Effective Meetings/07. Follow-up.md
+  - Miscellaneous:
+    - Acronyms: topic/acronym.md
+    - Ports: topic/ports.md
+    - Status Codes: topic/status_codes.md
 
 
 # Customization   

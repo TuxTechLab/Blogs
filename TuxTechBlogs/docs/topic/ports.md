@@ -1,5 +1,4 @@
-
----
+# **Ports**
 
 ## **Introduction**
 
@@ -9,7 +8,7 @@
 
 - To conclude, a port is a logical form to identify system activities or various network services used to create local or network-based communications.
 
--   For example, we use 80 for HTTP-web-based plain-text surfing and 443 for HTTPS-web-based encrypted websites in our daily work.
+- For example, we use 80 for HTTP-web-based plain-text surfing and 443 for HTTPS-web-based encrypted websites in our daily work.
 
 ---
 
@@ -17,11 +16,11 @@
 
 - When interacting over the Internet, TCP and UDP protocols make connections, recompile data packages after the transfer, and then deliver them to applications on the recipient’s device.
 
-- For this handover to work, the operating system must install and open the gateway for the transfer. 
+- For this handover to work, the operating system must install and open the gateway for the transfer.
 
 - Each door has a unique code number. After transmission, the receiving system uses the port number to determine where the data should be sent. The port numbers of the sender and receiver are always included in the data packet.
 
-- Ports are assigned sequential numbers from 0 to 65535. Some of these codes are standardized, meaning they are assigned to certain uses. Since code numbers are universally recognized and permanently assigned, these standard ports are also known as well-known ports. 
+- Ports are assigned sequential numbers from 0 to 65535. Some of these codes are standardized, meaning they are assigned to certain uses. Since code numbers are universally recognized and permanently assigned, these standard ports are also known as well-known ports.
 
 - Registered ports are those that organizations or software developers have registered for their applications. Registration is handled by the Internet Assigned Numbers Authority (IANA). A diverse selection of dynamically assigned port numbers is also available. For example, when viewing websites, browsers use these ports. After that, the phone number is free again.
 
@@ -29,9 +28,9 @@
 
 ## **Why is it important to know these ports?**
 
-- Any security researcher, bug bounty hunter, or anyone working with service configuration would benefit from this. 
+- Any security researcher, bug bounty hunter, or anyone working with service configuration would benefit from this.
 
-- Knowing how to do more thorough scans such as version detection or known vulnerabilities for ancient services that are still operating in the infrastructure, especially when using tools like Nmap, is handy when getting to know these protocols and services. 
+- Knowing how to do more thorough scans such as version detection or known vulnerabilities for ancient services that are still operating in the infrastructure, especially when using tools like Nmap, is handy when getting to know these protocols and services.
 
 ---
 
@@ -89,8 +88,7 @@ The following are some of the most common service names, transport protocol name
 | `5432` | Postgres SQL | TCP | PostgreSQL database system |
 | `5900` | RFB/VNC Server| TCP | virtual Network Computing (VNC) Remote Frame Buffer (RFB) protocol |
 | `6665-6669` | IRC | TCP | Internet Relat Chat |
-| `6881` | BitTorrent | unofficial | BitTorrent is part of the full range of ports used most 
-often |
+| `6881` | BitTorrent | unofficial | BitTorrent is part of the full range of ports used most often |
 | `6970` | Quicktime | unofficial | QuickTime Streaming Server |
 | `6999` | BitTorrent | unofficial | BitTorrent is part of the full range of ports used most often |
 | `8086` | Kaspersky AV | TCP | Kaspersky AV Control Center |
