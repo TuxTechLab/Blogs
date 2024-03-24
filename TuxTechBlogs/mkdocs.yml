@@ -1,6 +1,6 @@
 # Project information
-site_name: TuxTechBlogs
-site_description: Computer Science Realted Documents And Interview Tips, Questions, Tech-blogs.
+site_name: Blog.TuxTechLab.com
+site_description: Documenting Everything related to Computers, Internet, Security, Software Engineering
 site_url: https://github.com/TuxTechLab/Blogs
 site_author: Arindam Tanti
 
@@ -10,44 +10,55 @@ repo_url: https://github.com/TuxTechLab/Blogs
 edit_uri: ''
 
 # Copyright
-copyright: Copyright &copy; <a href="http://github.com/TuxTechLab">TuxTechLabs</a> 2023 - 2024
+copyright: Copyright &copy; <a href="http://github.com/TuxTechLab">TuxTechLab</a> 2024 - 2025
 
 # Configuration
 theme:
+    language: en
     name: material
     highlightjs: true
     hljs_languages:
       - yaml
       - rust
+      - html
+      - python
+      - css
+      - c++
+      - c
+      - javascript
     shortcuts:
-        help: 191    # ?
-        next: 78     # n
-        previous: 80 # p
-        search: 83   # s
-    logo: img/favicon.ico
+        help: 191    # ASCII - ? - HELP
+        next: 78     # ASCII - n - NEXT
+        previous: 80 # ASCII - p - PREVIOUS
+        search: 83   # ASCII - s - SEARCH
+    logo: img/logo.png
     favicon: img/favicon.ico
+    # Over riding the default font
     font:
-      text: Roboto
-      code: Roboto Mono
+      text: Readex Pro
+      code: Source Code Pro
     icon:
       logo: fontawesome/solid/code
       repo: fontawesome/brands/github
     features:
-      - navigation.expand
       - navigation.top
       - navigation.footer
-      - search.highlight
+      - navigation.expand
+      - navigation.instant
+      - navigation.instant.preview
+      - navigation.instant.progress
       - search.suggest
+      - search.highlight
       - content.code.copy
     palette:
       # Light mode
       - media: '(prefers-color-scheme: light)'
         scheme: default
         primary: yellow
-        accent: light blue
+        accent: amber
         toggle:
           icon: material/weather-night
-          name: Switch to Dark Mode
+          name: Dark Mode
       # Dark mode
       - media: '(prefers-color-scheme: dark)'
         scheme: slate
@@ -55,30 +66,30 @@ theme:
         accent: amber
         toggle:
           icon: material/weather-sunny
-          name: Switch To Light Mode
+          name: Light Mode
 
 nav:
   - Start: index.md
   - Code Of Conduct: CODE_OF_CONDUCT.md
   - Contribution Guide: Contribution.md
   - Agile:
-    - Introduction: topic/1.0. Agile/00. Introduction.md
+    - Introduction To Agile: topic/1.0. Agile/00. Introduction.md
     - Understanding the four values of agile: topic/1.0. Agile/01. Understanding the four values of agile.md
     - Using agile in everyday work: topic/1.0. Agile/02. Using agile in everyday work.md
   - ITSM:
-    - Introduction: topic/09. ITSM/00. Introduction.md
+    - Introduction To ITSM: topic/9.0. ITSM/00. Introduction.md
     - Key Terms: topic/9.0. ITSM/01. Key Terms.md
-    - ITSM Library and Practices: topic/09. ITSM/02. ITSM Library and Practices.md
+    - ITSM Library and Practices: topic/9.0. ITSM/02. ITSM Library and Practices.md
     - Core ITSM Practices: topic/9.0. ITSM/03. Core ITSM Practices.md
     - Maturity Matters: topic/9.0. ITSM/04. Maturity Matters.md
     - The Atlassian ITSM Solution: topic/9.0. ITSM/05. The Atlassian ITSM Solution.md
     - Key Takeaways: topic/9.0. ITSM/06. Key Takeaways.md
   - Scrum:
-    - Introduction: topic/19.0. Scrum/00. Introduction.md
+    - Introduction To Scum: topic/19.0. Scrum/00. Introduction.md
     - Scrum With Jira: topic/19.0. Scrum/02. Scrum With Jira.md
   - Management:
     - Run Effective Meetings:
-      - Introduction: topic/13.1. Management/00. Run Effective Meetings/01. Introduction.md
+      - Planning A Productive Meeting: topic/13.1. Management/00. Run Effective Meetings/01. Introduction.md
       - Event Determination: topic/13.1. Management/00. Run Effective Meetings/02. Event Determination.md
       - Running Effective Meeting: topic/13.1. Management/00. Run Effective Meetings/03. Running Effective Meeting.md
       - Preparation: topic/13.1. Management/00. Run Effective Meetings/04. Preparation.md
@@ -113,8 +124,8 @@ extra:
     provider: google
     property: G-BCZ32RGHJ0
 
-# extra_css:
-#   - css/extra.css
+extra_css:
+  - stylesheet/extra.css
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js
@@ -145,5 +156,5 @@ plugins:
 spec:
   source: 
     git:
-      ref: TuxTechLab
+      ref: Blogs by TuxTechLab
       url: https://github.com/TuxTechLab/Blogs
