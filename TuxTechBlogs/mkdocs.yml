@@ -117,9 +117,9 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/arindam_tanti
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/arindam-tanti
+      link: https://www.linkedin.com/company/tuxtechlab
     - icon: material/book-open-page-variant
-      link: https://i-am-ghost.github.io/TuxTechBlogs/
+      link: https://github.com/TuxTechLab/Blogs
   analytics:
     provider: google
     property: G-BCZ32RGHJ0
