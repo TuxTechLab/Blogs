@@ -84,9 +84,12 @@ nav:
     - Maturity Matters: topic/9.0. ITSM/04. Maturity Matters.md
     - The Atlassian ITSM Solution: topic/9.0. ITSM/05. The Atlassian ITSM Solution.md
     - Key Takeaways: topic/9.0. ITSM/06. Key Takeaways.md
+  - Kanban:
+    - Introduction To Kanban: topic/11.0. Kanban/00. Introduction.md
+    - Kanban Using Jira: topic/11.0. Kanban/01. Kanban Using Jira.md
   - Scrum:
-    - Introduction To Scum: topic/19.0. Scrum/00. Introduction.md
-    - Scrum With Jira: topic/19.0. Scrum/02. Scrum With Jira.md
+    - Introduction To Scrum: topic/19.0. Scrum/00. Introduction.md
+    - Scrum With Jira: topic/19.0. Scrum/01. Scrum With Jira.md
   - Management:
     - Run Effective Meetings:
       - Planning A Productive Meeting: topic/13.1. Management/00. Run Effective Meetings/01. Introduction.md
