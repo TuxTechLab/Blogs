@@ -76,6 +76,8 @@ nav:
     - Introduction To Agile: topic/1.0. Agile/00. Introduction.md
     - Understanding the four values of agile: topic/1.0. Agile/01. Understanding the four values of agile.md
     - Using agile in everyday work: topic/1.0. Agile/02. Using agile in everyday work.md
+  - DevOps:
+    - Introduction To DevOps: topic/4.0. DevOps/00. Introduction to DevOps
   - ITSM:
     - Introduction To ITSM: topic/9.0. ITSM/00. Introduction.md
     - Key Terms: topic/9.0. ITSM/01. Key Terms.md
