@@ -30,7 +30,7 @@
 
 ---
 
-![different*status*codes](./assets/different*status*codes.png)
+![different*status*codes](https://i.postimg.cc/NF3GXV0j/different-status-codes.png)
 
 ---
 
@@ -257,14 +257,14 @@ They can be detrimental to your SEO, as search engines can prompt crawlers to sl
 
    - Some status codes are visible, while others are not If you want to check a page’s HTTP status code, you can use your browser, Google Search Console, or an SEO tool.
 
-     1 Open any page with the Chrome web browser and right-click anywhere on the screen Then, click **"Inspect"**.
-        ![webpage*inspect](./assets/webpage*inspect.png)
+     1. Open any page with the Chrome web browser and right-click anywhere on the screen Then, click **"Inspect"**.
+        ![webpage*inspect](https://i.postimg.cc/kX2fXH8t/webpage-inspect.png)
 
-     2 Now, select **“Network”** on the top menu.
-        ![webpage*network*menu](./assets/webpage*network*menu.png)
+     2. Now, select **“Network”** on the top menu.
+        ![webpage*network*menu](https://i.postimg.cc/43fcnKMF/webpage-network-menu.png)
 
-     3 You should see the status codes under the **“Status”** column.
-        ![webpage*network*status](./assets/webpage*network*status.png)
+     3. You should see the status codes under the **“Status”** column.
+        ![webpage*network*status](https://i.postimg.cc/C1dfH3wG/webpage-network-status.png)
         - Each row represents a resource And each column represents information about the resource.
         - The top resource is usually the HTML document And the last resource is whatever was requested last.
         - You’d use this web browser method if you don’t own or manage the website you’re inspecting.
@@ -282,26 +282,26 @@ If a webpage or API is giving error status codes for short durations or longer o
 
 > **Short Duration Errors/ Outages**
 
-   1 *Inconvenience to users*: Users may experience temporary errors while accessing the webpage or API, which can be frustrating and may lead to a negative user experience.
-   2 *Loss of data*: If the error occurs during a critical transaction, such as a payment or data submission, users may lose their progress and have to start again.
-   3 *Decreased productivity*: If the error occurs frequently, users may lose time and productivity trying to resolve the issue or find workarounds.
+   1. *Inconvenience to users*: Users may experience temporary errors while accessing the webpage or API, which can be frustrating and may lead to a negative user experience.
+   2. *Loss of data*: If the error occurs during a critical transaction, such as a payment or data submission, users may lose their progress and have to start again.
+   3. *Decreased productivity*: If the error occurs frequently, users may lose time and productivity trying to resolve the issue or find workarounds.
 
 > **Longer Duration Errors/ Outages:**
 
-   1 *Loss of revenue*: If the error occurs during a critical transaction, such as a payment or sales, the business may lose revenue and customers.
-   2 *Decreased user trust*: Frequent errors can lead to a loss of trust among users, which can negatively impact the business's reputation and customer loyalty.
-   3 *Increased support requests*: Longer duration errors can lead to an increase in support requests, which can be time-consuming and costly to resolve.
-   4 *Negative impact on SEO*: If the errors are not resolved quickly, it can negatively impact the business's search engine optimization (SEO) and reputation.
-   5 *Loss of data*: If the error occurs during a critical transaction, such as a payment or data submission, the business may lose important data, which can be difficult and costly to recover.
-   6 *Legal and compliance issues*: Depending on the nature of the error, it may lead to legal and compliance issues, such as data breaches or non-compliance with regulations.
-   7 *Increased maintenance costs*: Longer duration errors can lead to increased maintenance costs, as the business may need to invest in additional resources to resolve the issue.
-   8 *Decreased employee productivity*: If the error occurs frequently, employees may spend more time trying to resolve the issue, which can decrease their productivity and morale.
+   1. *Loss of revenue*: If the error occurs during a critical transaction, such as a payment or sales, the business may lose revenue and customers.
+   2. *Decreased user trust*: Frequent errors can lead to a loss of trust among users, which can negatively impact the business's reputation and customer loyalty.
+   3. *Increased support requests*: Longer duration errors can lead to an increase in support requests, which can be time-consuming and costly to resolve.
+   4. *Negative impact on SEO*: If the errors are not resolved quickly, it can negatively impact the business's search engine optimization (SEO) and reputation.
+   5. *Loss of data*: If the error occurs during a critical transaction, such as a payment or data submission, the business may lose important data, which can be difficult and costly to recover.
+   6. *Legal and compliance issues*: Depending on the nature of the error, it may lead to legal and compliance issues, such as data breaches or non-compliance with regulations.
+   7. *Increased maintenance costs*: Longer duration errors can lead to increased maintenance costs, as the business may need to invest in additional resources to resolve the issue.
+   8. *Decreased employee productivity*: If the error occurs frequently, employees may spend more time trying to resolve the issue, which can decrease their productivity and morale.
 
 > **To mitigate the risks associated with error status codes, it is important to have a robust error handling process in place, which includes:**
 
-   1 *Monitoring and logging*: Implementing monitoring and logging tools to track errors and identify the root cause.
-   2 *Error handling protocols*: Establishing error handling protocols to ensure that errors are resolved quickly and effectively.
-   3 *Communication*: Communicating with users and stakeholders about the error and the steps being taken to resolve it.
-   4 *Training*: Providing training to employees on error handling and troubleshooting.
-   5 *Regular maintenance*: Regularly maintaining and updating the system to prevent errors and improve performance.
-   6 *Redundancy*: Implementing redundancy measures to ensure that the system remains available even in the event of an error.
+   1. *Monitoring and logging*: Implementing monitoring and logging tools to track errors and identify the root cause.
+   2. *Error handling protocols*: Establishing error handling protocols to ensure that errors are resolved quickly and effectively.
+   3. *Communication*: Communicating with users and stakeholders about the error and the steps being taken to resolve it.
+   4. *Training*: Providing training to employees on error handling and troubleshooting.
+   5. *Regular maintenance*: Regularly maintaining and updating the system to prevent errors and improve performance.
+   6. *Redundancy*: Implementing redundancy measures to ensure that the system remains available even in the event of an error.
