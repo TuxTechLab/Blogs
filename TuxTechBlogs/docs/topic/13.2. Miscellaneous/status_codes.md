@@ -30,7 +30,7 @@
 
 ---
 
-![different*status*codes](./assets/different*status*codes.png)
+![different*status*codes](https://i.postimg.cc/NF3GXV0j/different-status-codes.png)
 
 ---
 
@@ -257,14 +257,14 @@ They can be detrimental to your SEO, as search engines can prompt crawlers to sl
 
    - Some status codes are visible, while others are not If you want to check a page’s HTTP status code, you can use your browser, Google Search Console, or an SEO tool.
 
-     1 Open any page with the Chrome web browser and right-click anywhere on the screen Then, click **"Inspect"**.
-        ![webpage*inspect](./assets/webpage*inspect.png)
+     1. Open any page with the Chrome web browser and right-click anywhere on the screen Then, click **"Inspect"**.
+        ![webpage*inspect](https://i.postimg.cc/kX2fXH8t/webpage-inspect.png)
 
-     2 Now, select **“Network”** on the top menu.
-        ![webpage*network*menu](./assets/webpage*network*menu.png)
+     2. Now, select **“Network”** on the top menu.
+        ![webpage*network*menu](https://i.postimg.cc/43fcnKMF/webpage-network-menu.png)
 
-     3 You should see the status codes under the **“Status”** column.
-        ![webpage*network*status](./assets/webpage*network*status.png)
+     3. You should see the status codes under the **“Status”** column.
+        ![webpage*network*status](https://i.postimg.cc/C1dfH3wG/webpage-network-status.png)
         - Each row represents a resource And each column represents information about the resource.
         - The top resource is usually the HTML document And the last resource is whatever was requested last.
         - You’d use this web browser method if you don’t own or manage the website you’re inspecting.
