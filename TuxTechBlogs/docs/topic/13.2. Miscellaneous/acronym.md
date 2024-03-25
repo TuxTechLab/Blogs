@@ -1,6 +1,5 @@
 # **Acronyms**
 
-- [**Acronyms**](#acronyms)
   - [**A**](#a)
   - [**B**](#b)
   - [**C**](#c)

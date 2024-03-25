@@ -102,9 +102,9 @@ nav:
       - Participation: topic/13.1. Management/00. Run Effective Meetings/06. Participation.md
       - Follow-up: topic/13.1. Management/00. Run Effective Meetings/07. Follow-up.md
   - Miscellaneous:
-    - Acronyms: topic/acronym.md
-    - Ports: topic/ports.md
-    - Status Codes: topic/status_codes.md
+    - Acronyms: topic/13.2. Miscellaneous/acronym.md
+    - Ports: topic/13.2. Miscellaneous/ports.md
+    - Status Codes: topic/13.2. Miscellaneous/status_codes.md
 
 
 # Customization   
