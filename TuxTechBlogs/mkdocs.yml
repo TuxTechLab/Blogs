@@ -1,13 +1,13 @@
 # Project information
-site_name: Blog.TuxTechLab.com
+site_name: Blogs.TuxTechLab.com
 site_description: Documenting Everything related to Computers, Internet, Security, Software Engineering
-site_url: https://github.com/TuxTechLab/Blogs
+site_url: https://blogs.tuxtechlab.com
 site_author: Arindam Tanti
 
 # Repository
 repo_name: TuxTechLab/Blogs
 repo_url: https://github.com/TuxTechLab/Blogs
-edit_uri: ''
+edit_uri: 'https://blogs.tuxtechlab.com'
 
 # Copyright
 copyright: Copyright &copy; <a href="http://github.com/TuxTechLab">TuxTechLab</a> 2024 - 2025
