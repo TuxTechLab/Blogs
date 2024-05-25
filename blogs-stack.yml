@@ -5,7 +5,14 @@ services:
     image: "blogs:latest"
     ports:
       - "8000:8000"
-
+    deploy:
+      resources:
+        limits:
+          cpus: '0.8'
+          memory: 50M
+        reservations:
+          cpus: '0.5'
+          memory: 20M
 
 networks:
   blog_net:
