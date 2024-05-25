@@ -1,0 +1,9 @@
+# Ignore Files
+**/*.log
+**/*.pyc
+**/*.env
+
+# Folders
+__pycache__
+logs
+test

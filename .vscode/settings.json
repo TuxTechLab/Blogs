@@ -1,1 +1,31 @@
-{}
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#feff1a",
+        "activityBar.background": "#feff1a",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#00bebf",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#feff1a",
+        "statusBar.background": "#e5e600",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#b2b300",
+        "statusBarItem.remoteBackground": "#e5e600",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#e5e600",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#e5e60099",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#e5e600",
+    "peacock.remotecolor": "#e5e600",
+    // Disable Folder Collapse in the project
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": true,
+    "explorer.enableDragAndDrop": true,
+    "explorer.enableUndo": true,
+    "explorer.confirmUndo": true,
+    "explorer.confirmDelete": true,
+    "explorer.confirmPasteNative": true,
+}
