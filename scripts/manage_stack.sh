@@ -10,12 +10,14 @@
 #                       as a service, follow help.           #
 ##############################################################
 
-
-set -x  # Enable debugging
-set -e  # Exit immediately if a command exits with a non-zero status
+# Disabled debugging by-default.
+# Enable it by uncomment the below line and start debug mode.
+# set -x
+# Exit immediately if a command exits with a non-zero status
+# set -e # Disabled Exit on Error to capture errors.
 set -o pipefail # Checks for any pipefails
 
-logfile="./blog.log"
+logfile="../logs/blog-stack-$(date +'%d-%m-%Y').log"
 
 # Help function to display usage instructions
 help(){
@@ -26,13 +28,21 @@ help(){
     echo "  stop     - Stop a stack"
     echo "  update   - Update a stack"
     echo "  scale    - Scale a stack"
+    echo ""
+    echo "EXAMPLES: "
+    echo ""
+    echo "1. Deploy        - bash manage_stack.sh deploy <new-stack-name>"
+    echo "2. Restart       - bash manage_stack.sh restart <existing-stack-name>"
+    echo "3. Stop          - bash manage_stack.sh stop <existing-stack-name>"
+    echo "4. Update        - bash manage_stack.sh update <existing-stack-name>"
+    echo "4. Scale Up/Down - bash manage_stack.sh  <existing-stack-name>"
     exit 1
 }
 
 # Function to deploy a stack
 stack_deploy(){
     local stack_name=$1
-    img_spec="blogs:$(date +%Y%m%d%H%M%S)"
+    img_spec="blogs:$(date +%Y%m%d-%H-%M-%S)"
     # Setting Up the logfile
     echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Starting Blogs Stack Deploy." | tee -a $logfile
 
@@ -81,6 +91,9 @@ restart_stack(){
 
 # Function to update a stack
 update_stack(){
+    # Use This When you have done changes on the stack/ docker image. This will help to update
+    # the whole stack using a single command
+
     local stack_name=$1
     
     # Update the Docker stack
@@ -97,6 +110,12 @@ scale_stack(){
     # Scale the specified service in the Docker stack
     echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Scaling Service: $service_name in Stack: $stack_name to $replicas replicas" | tee -a $logfile
     docker service scale "$stack_name"_"$service_name"="$replicas" | tee -a $logfile
+}
+
+# Function to list running stacks
+list_stacks(){
+    echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Listing All running Docker Stacks:" | tee -a $logfile
+    docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}' | tee -a $logfile
 }
 
 # Main function to parse command-line arguments and execute corresponding functions
@@ -125,6 +144,9 @@ main(){
             service_name=$3
             replicas=$4
             scale_stack "$stack_name" "$service_name" "$replicas"
+            ;;
+        list)
+            list_stacks
             ;;
         *)
             help
