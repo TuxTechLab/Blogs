@@ -16,7 +16,8 @@ copyright: >
 # Site Configurations
 use_directory_urls: true
 strict: no
-dev_addr: 0.0.0.0:{BLOGS_CTR_INTERNAL_PORT}
+# Enable dev_addr when working in development environment.
+#dev_addr: 0.0.0.0:{BLOGS_CTR_INTERNAL_PORT}
 
 # Configuration
 theme:
