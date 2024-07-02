@@ -1,5 +1,5 @@
 /* 
-Copyright (c) 2019-2024 Arindam Tanti <arindamtanti123@gmail.com>
+Copyright (c) 2019-2024 TuxTechLabs <root.tuxtechlab@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
@@ -23,13 +23,13 @@ DEALINGS
 /* Expanding the grid width of the website */
 
 .md-grid {
-    max-width: 1600px; 
+    max-width: 1440px; 
   }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
-* {font-family: 'Readex Pro';} */
+.h1#changelog{
+  font-size: 50rem;
+}
 
-@font-face {
-font-family: "Readex Pro";
-src: "https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap";
+.ul{
+  font-size: 20%;
 }
