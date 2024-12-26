@@ -1,23 +1,4 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#feff1a",
-        "activityBar.background": "#feff1a",
-        "activityBar.foreground": "#15202b",
-        "activityBar.inactiveForeground": "#15202b99",
-        "activityBarBadge.background": "#00bebf",
-        "activityBarBadge.foreground": "#15202b",
-        "commandCenter.border": "#15202b99",
-        "sash.hoverBorder": "#feff1a",
-        "statusBar.background": "#e5e600",
-        "statusBar.foreground": "#15202b",
-        "statusBarItem.hoverBackground": "#b2b300",
-        "statusBarItem.remoteBackground": "#e5e600",
-        "statusBarItem.remoteForeground": "#15202b",
-        "titleBar.activeBackground": "#e5e600",
-        "titleBar.activeForeground": "#15202b",
-        "titleBar.inactiveBackground": "#e5e60099",
-        "titleBar.inactiveForeground": "#15202b99"
-    },
     "peacock.color": "#e5e600",
     "peacock.remotecolor": "#e5e600",
     // Disable Folder Collapse in the project
@@ -28,4 +9,24 @@
     "explorer.confirmUndo": true,
     "explorer.confirmDelete": true,
     "explorer.confirmPasteNative": true,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#ffff33",
+        "activityBar.background": "#ffff33",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#00bfbf",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#ffff33",
+        "statusBar.background": "#ffff00",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#cccc00",
+        "statusBarItem.remoteBackground": "#ffff00",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#ffff00",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#ffff0099",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.remoteColor": "yellow",
 }
