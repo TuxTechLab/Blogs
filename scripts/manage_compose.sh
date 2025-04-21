@@ -2,8 +2,8 @@
 
 ##############################################################
 #                                                            #
-#      Author        :  Arindam Tanti                        #
-#      Email Address :  iamarindamtanti@gmail.com            #
+#      Author        :  TuxTechLab.com                       #
+#      Email Address :  root.tuxtechlab@gmail.com            #
 #                                                            #
 #      Description   :  This script helps you to start,      #
 #                       stop, update, and scale the blogs    #
@@ -18,7 +18,7 @@
 # set -e # Disabled Exit on Error to capture errors.
 set -o pipefail # Checks for any pipe failures
 
-logfile="../logs/blog-compose-$(date +'%d-%m-%Y').log"
+logfile="../logs/blog-stack-$(date +'%d-%m-%Y-%H:%M').log"
 
 # Help function to display usage instructions
 help(){

@@ -1,12 +1,11 @@
-version: '3.9'
-
 services:
-  blogs-svc:
+  tuxtechblog-mkdocs:
     build:
       context: .
-      dockerfile: mkdocs_blogs.Dockerfile
+      # dockerfile: mkdocs_blogs.Dockerfile
+      dockerfile: blogs.tuxtechlab.Dockerfile
     ports:
-      - "8000:8000"
+      - "${BLOGS_CTR_INTERNAL_PORT}:${BLOGS_CTR_EXTERNAL_PORT}"
     restart: "unless-stopped"
     deploy:
       resources:
@@ -16,3 +15,5 @@ services:
         reservations:
           cpus: '0.5'
           memory: 20M
+    volumes:
+      - ${PWD}/TuxTechBlogs/:/docs

@@ -1,16 +1,23 @@
 # Project information
-site_name: Blogs.TuxTechLab.com
-site_description: Documenting Everything related to Computers, Internet, Security, Software Engineering
+site_name: TuxTechBlogs
+site_description: Computer Science, Internet, Security, Software Engineering
 site_url: https://blogs.tuxtechlab.com
 site_author: Arindam Tanti
 
 # Repository
 repo_name: TuxTechLab/Blogs
-repo_url: https://github.com/TuxTechLab/Blogs
-edit_uri: 'https://blogs.tuxtechlab.com'
+repo_url: https://github.com/TuxTechLab/Blogs/
+edit_uri: edit/main/TuxTechBlogs/docs/
 
 # Copyright
-copyright: Copyright &copy; <a href="http://github.com/TuxTechLab">TuxTechLab</a> 2024 - 2025
+copyright: >
+  Maintained & Copyright &copy; <a href="http://github.com/TuxTechLab">TuxTechLab</a> 2024 - 2025
+
+# Site Configurations
+use_directory_urls: true
+strict: false
+# Enable dev_addr when working in development environment.
+#dev_addr: 0.0.0.0:{BLOGS_CTR_INTERNAL_PORT}
 
 # Configuration
 theme:
@@ -41,15 +48,34 @@ theme:
       logo: fontawesome/solid/code
       repo: fontawesome/brands/github
     features:
-      - navigation.top
-      - navigation.footer
-      - navigation.expand
-      - navigation.instant
-      - navigation.instant.preview
-      - navigation.instant.progress
-      - search.suggest
-      - search.highlight
-      - content.code.copy
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.tabs
+    # - navigation.sections # Read: https://jimandreas.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
+    - navigation.expand # Read : https://jimandreas.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
+    # - navigation.tabs.sticky # Disabled as scroll down on pages doesn't require the nav bar
+    # - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
     palette:
       # Light mode
       - media: '(prefers-color-scheme: light)'
@@ -68,47 +94,85 @@ theme:
           icon: material/weather-sunny
           name: Light Mode
 
+# Page Tree
 nav:
-  - Start: index.md
-  - Code Of Conduct: CODE_OF_CONDUCT.md
-  - Contribution Guide: Contribution.md
-  - Agile:
-    - Introduction To Agile: topic/1.0. Agile/00. Introduction.md
-    - Understanding the four values of agile: topic/1.0. Agile/01. Understanding the four values of agile.md
-    - Using agile in everyday work: topic/1.0. Agile/02. Using agile in everyday work.md
-  - DevOps:
-    - Introduction To DevOps: topic/4.0. DevOps/00. Introduction.md
-  - ITSM:
-    - Introduction To ITSM: topic/9.0. ITSM/00. Introduction.md
-    - Key Terms: topic/9.0. ITSM/01. Key Terms.md
-    - ITSM Library and Practices: topic/9.0. ITSM/02. ITSM Library and Practices.md
-    - Core ITSM Practices: topic/9.0. ITSM/03. Core ITSM Practices.md
-    - Maturity Matters: topic/9.0. ITSM/04. Maturity Matters.md
-    - The Atlassian ITSM Solution: topic/9.0. ITSM/05. The Atlassian ITSM Solution.md
-    - Key Takeaways: topic/9.0. ITSM/06. Key Takeaways.md
-  - Kanban:
-    - Introduction To Kanban: topic/11.0. Kanban/00. Introduction.md
-    - Kanban Using Jira: topic/11.0. Kanban/01. Kanban Using Jira.md
-  - Scrum:
-    - Introduction To Scrum: topic/19.0. Scrum/00. Introduction.md
-    - Scrum With Jira: topic/19.0. Scrum/01. Scrum With Jira.md
-  - Management:
-    - Run Effective Meetings:
-      - Planning A Productive Meeting: topic/13.1. Management/00. Run Effective Meetings/01. Introduction.md
-      - Event Determination: topic/13.1. Management/00. Run Effective Meetings/02. Event Determination.md
-      - Running Effective Meeting: topic/13.1. Management/00. Run Effective Meetings/03. Running Effective Meeting.md
-      - Preparation: topic/13.1. Management/00. Run Effective Meetings/04. Preparation.md
-      - Facilitation: topic/13.1. Management/00. Run Effective Meetings/05. Facilitation.md
-      - Participation: topic/13.1. Management/00. Run Effective Meetings/06. Participation.md
-      - Follow-up: topic/13.1. Management/00. Run Effective Meetings/07. Follow-up.md
+  - Home: index.html
+  - Getting Started:
+    - Start: readme.md
+    - Code Of Conduct: CODE_OF_CONDUCT.md
+    - How To Contribute?: contribution.md
+    - Release Note: CHANGELOG.md
+  - Foundation:
+    # - Foundation Introduction: topic/foundation.html
+    - DevOps: 
+      - Introduction to DevOps: topic/4.0. DevOps/00. Introduction.md
+    # - Core Subjects:
+    #   - Operating Systemm
+    #   - Networking
+    #   - System Design
+    #   - Object Oriented Programming
+    # - Technologies:
+    #   - Cloud
+    #   - Container
+    #   - Orchestration
+    #   - CI/CD
+    #   - Coding Tools
+    #   - Automation
+    #   - IaaC
+    #   - Virtualization
+    #   - Linux
+    #   - Windows
+    # - Stratagies:
+    #   - Site Reliability Engineering
+    #   - Command Center
+    - Management:
+      - ITSM:
+        - Introduction To ITSM: topic/9.0. ITSM/00. Introduction.md
+        - Key Terms: topic/9.0. ITSM/01. Key Terms.md
+        - ITSM Library and Practices: topic/9.0. ITSM/02. ITSM Library and Practices.md
+        - Core ITSM Practices: topic/9.0. ITSM/03. Core ITSM Practices.md
+        - Maturity Matters: topic/9.0. ITSM/04. Maturity Matters.md
+        - The Atlassian ITSM Solution: topic/9.0. ITSM/05. The Atlassian ITSM Solution.md
+        - Key Takeaways: topic/9.0. ITSM/06. Key Takeaways.md
+      - Kanban:
+        - Introduction To Kanban: topic/11.0. Kanban/00. Introduction.md
+        - Kanban Using Jira: topic/11.0. Kanban/01. Kanban Using Jira.md
+      - Scrum:
+        - Introduction To Scrum: topic/19.0. Scrum/00. Introduction.md
+        - Scrum With Jira: topic/19.0. Scrum/01. Scrum With Jira.md
+      - Agile:
+        - Introduction To Agile: topic/1.0. Agile/00. Introduction.md
+        - Understanding the four values of agile: topic/1.0. Agile/01. Understanding the four values of agile.md
+        - Using agile in everyday work: topic/1.0. Agile/02. Using agile in everyday work.md
+      - Run Effective Meetings:
+        - Planning A Productive Meeting: topic/13.1. Management/00. Run Effective Meetings/01. Introduction.md
+        - Event Determination: topic/13.1. Management/00. Run Effective Meetings/02. Event Determination.md
+        - Running Effective Meeting: topic/13.1. Management/00. Run Effective Meetings/03. Running Effective Meeting.md
+        - Preparation: topic/13.1. Management/00. Run Effective Meetings/04. Preparation.md
+        - Facilitation: topic/13.1. Management/00. Run Effective Meetings/05. Facilitation.md
+        - Participation: topic/13.1. Management/00. Run Effective Meetings/06. Participation.md
+        - Follow-up: topic/13.1. Management/00. Run Effective Meetings/07. Follow-up.md
+    - Interview Preparation: study/interview_prep/interview.md
+  - TuxTechCodes:
+      # - Python
+      # - C++
+      # - Java
+      # - Leetcode:
+      - Integration
+      - Shell
   - Miscellaneous:
     - Acronyms: topic/13.2. Miscellaneous/acronym.md
     - Ports: topic/13.2. Miscellaneous/ports.md
     - Status Codes: topic/13.2. Miscellaneous/status_codes.md
-
+  - Contact Us: contacts.md
 
 # Customization   
 extra:
+  alternate:
+    - name: English
+      link: \en\
+      lang: en
+  generator: false
   consent:
     title: Cookie consent
     description:
@@ -119,7 +183,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.sprcom/tuxtechlab
-    - icon: fontawesome/brands/twitter
+    - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/arindam_tanti
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/tuxtechlab
@@ -127,7 +191,7 @@ extra:
       link: https://github.com/TuxTechLab/Blogs
   analytics:
     provider: google
-    property: G-BCZ32RGHJ0
+    property: XXXXXX
 
 extra_css:
   - stylesheet/extra.css
@@ -137,29 +201,109 @@ extra_javascript:
 
 # Extensions
 markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
   - toc:
-      permalink: false
-  - pymdownx.highlight:
-      linenums: true
-      linenums_style: pymdownx.table
-  - pymdownx.tasklist:
-      custom_checkbox: true
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.twemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.superfences
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
   - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - abbr
+  - admonition
+  - attr_list
+  - codehilite
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 # Plugins
 plugins:
   - search:
       lang:
         - en
-
-spec:
-  source: 
-    git:
-      ref: Blogs by TuxTechLab
-      url: https://github.com/TuxTechLab/Blogs
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_date_format: full
+      post_url_date_format: yyyy/MM/dd
+  - minify:
+      minify_html: true
