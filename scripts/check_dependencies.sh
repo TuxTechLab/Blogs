@@ -3,8 +3,8 @@
 
 #################################################################
 #                                                               #
-#      Author        :  Arindam Tanti                           #
-#      Email Address :  arindamtanti123@gmail.com               #
+#      Author        :  TuxTechLab.com                          #
+#      Email Address :  root.tuxtechlab@gmail.com               #
 #                                                               #
 #      Description   :  This script validates the environment   #
 #                       for Docker Swarm, Python3, Poetry,      #
