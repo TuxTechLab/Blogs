@@ -2,8 +2,8 @@
 
 ##############################################################
 #                                                            #
-#      Author        :  Arindam Tanti                        #
-#      Email Address :  iamarindamtanti@gmail.com             #
+#      Author        :  TuxTechLab.com                       #
+#      Email Address :  root.tuxtechlab@gmail.com            #
 #                                                            #
 #      Description   :  This script helps you to start,      #
 #                       stop, update, scale the blogs stack  #
@@ -17,7 +17,7 @@
 # set -e # Disabled Exit on Error to capture errors.
 set -o pipefail # Checks for any pipefails
 
-logfile="../logs/blog-stack-$(date +'%d-%m-%Y').log"
+logfile="../logs/blog-stack-$(date +'%d-%m-%Y-%H:%M').log"
 
 # Help function to display usage instructions
 help(){
@@ -39,34 +39,38 @@ help(){
     exit 1
 }
 
+logger(){
+    echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] | $1" | tee -a $logfile
+}
+
 # Function to deploy a stack
 stack_deploy(){
     local stack_name=$1
     img_spec="blogs:$(date +%Y%m%d-%H-%M-%S)"
     # Setting Up the logfile
-    echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Starting Blogs Stack Deploy." | tee -a $logfile
+    logger "(INFO) | Starting Blogs Stack Deploy."
 
     # Check if Docker is running in Swarm mode
     if docker info | grep -q "Swarm: active"; then
-        echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Docker is running in Swarm mode." | tee -a $logfile
-        echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Proceeding to Building Container and Deploying Application Stack..." | tee -a $logfile
+        logger "(INFO) | Docker is running in Swarm mode."
+        logger "(INFO) | Proceeding to Building Container and Deploying Application Stack..."
         
         # Build a new Docker image with the Dockerfile and tag it
-        echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Building Container Image [ $img_spec ]" | tee -a $logfile
-        cp ../mkdocs_blogs.Dockerfile ../Dockerfile | tee -a $logfile
-        docker build -t $img_spec ".." --no-cache | tee -a $logfile
+        logger "(INFO) | Building Container Image [ $img_spec ]"
+        cp ../mkdocs_blogs.Dockerfile ../Dockerfile
+        docker build -t $img_spec ".." --no-cache
         rm ../Dockerfile
-        docker image ls $img_spec | tee -a $logfile
+        docker image ls $img_spec
 
         # Run Docker stack deploy with the specified service file
-        echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Deploying Docker Stack: [ $stack_name ]" | tee -a $logfile
-        docker stack deploy -c "../blogs-stack.yml" "$stack_name" | tee -a $logfile
-        sleep 10 | tee -a $logfile
-        docker service ls | grep "blogs:" | tee -a $logfile
+        logger "(INFO) | Deploying Docker Stack: [ $stack_name ]"
+        docker stack deploy -c "../blogs-stack.yml" "$stack_name"
+        sleep 10
+        docker service ls | grep "blogs:"
 
-        echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Docker Stack [ $stack_name ] Started Successfully." | tee -a $logfile
+        logger "(INFO) | Docker Stack [ $stack_name ] Started Successfully."
     else
-        echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (ERROR) | Error: Docker is not running in Swarm mode. Please enable Swarm mode to deploy Blogs stacks." | tee -a $logfile
+        logger "(ERROR) | Error: Docker is not running in Swarm mode. Please enable Swarm mode to deploy Blogs stacks."
         exit 1
     fi
 }
@@ -76,14 +80,14 @@ stop_stack(){
     local stack_name=$1
     
     # Stop the Docker stack
-    echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Stopping Docker Stack: $stack_name" | tee -a $logfile
-    docker stack rm "$stack_name" | tee -a $logfile
+    logger "(INFO) | Stopping Docker Stack: $stack_name"
+    docker stack rm "$stack_name"
 }
 
 # Function to restart a stack
 restart_stack(){
     local stack_name=$1
-    echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Restaring Docker Stack: $stack_name" | tee -a $logfile
+    logger "(INFO) | Restaring Docker Stack: $stack_name"
     stop_stack $stack_name 
     sleep 5
     stack_deploy $stack_name
@@ -97,8 +101,8 @@ update_stack(){
     local stack_name=$1
     
     # Update the Docker stack
-    echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Updating Docker Stack: $stack_name" | tee -a $logfile
-    docker stack deploy -c "../blogs-stack.yml" "$stack_name" | tee -a $logfile
+    logger "(INFO) | Updating Docker Stack: $stack_name"
+    docker stack deploy -c "../blogs-stack.yml" "$stack_name"
 }
 
 # Function to scale a stack
@@ -108,14 +112,14 @@ scale_stack(){
     local replicas=$3
     
     # Scale the specified service in the Docker stack
-    echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Scaling Service: $service_name in Stack: $stack_name to $replicas replicas" | tee -a $logfile
-    docker service scale "$stack_name"_"$service_name"="$replicas" | tee -a $logfile
+    logger "(INFO) | Scaling Service: $service_name in Stack: $stack_name to $replicas replicas"
+    docker service scale "$stack_name"_"$service_name"="$replicas"
 }
 
 # Function to list running stacks
 list_stacks(){
-    echo "[ $(date +'%d-%m-%Y %H:%M:%S') ] (INFO) | Listing All running Docker Stacks:" | tee -a $logfile
-    docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}' | tee -a $logfile
+    logger "(INFO) | Listing All running Docker Stacks:"
+    docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'
 }
 
 # Main function to parse command-line arguments and execute corresponding functions
